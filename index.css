@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.config-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.config-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.config-card h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #dbeafe;
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+.form-config {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.players-row {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.player-box {
+  flex: 1;
+  min-width: 280px;
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.red-side {
+  border: 2px solid rgba(239, 68, 68, 0.7);
+}
+
+.blue-side {
+  border: 2px solid rgba(59, 130, 246, 0.7);
+}
+
+.player-box h2 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+.player-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.player-box input {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 14px;
+  outline: none;
+}
+
+.color-label {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.red-label {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fecaca;
+}
+
+.blue-label {
+  background: rgba(59, 130, 246, 0.2);
+  color: #bfdbfe;
+}
+
+.start-button {
+  align-self: center;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #facc15;
+  color: #111827;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(250, 204, 21, 0.35);
+}
+
+@media (max-width: 700px) {
+  .config-card {
+    padding: 24px;
+  }
+
+  .config-card h1 {
+    font-size: 2rem;
+  }
+}

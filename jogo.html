@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="jogo.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="scoreboard" id="scoreboard">
+      <div class="player-score red-player active-player" id="score-j1">
+        <span class="player-name" id="nome-j1">Jogador 1</span>
+        <span class="player-points" id="pontos-j1">0</span>
+      </div>
+
+      <div class="center-info">
+        <h1>Jogo da Memória</h1>
+        <p id="turno-texto">Vez de Jogador 1</p>
+      </div>
+
+      <div class="player-score blue-player" id="score-j2">
+        <span class="player-name" id="nome-j2">Jogador 2</span>
+        <span class="player-points" id="pontos-j2">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="game-layout">
+    <section class="board-section">
+      <div class="board" id="board"></div>
+      <div class="game-actions">
+        <button id="restart-button">Reiniciar Partida</button>
+      </div>
+    </section>
+
+    <aside class="side-panel">
+      <section class="panel-box">
+        <h2>Últimas jogadas</h2>
+        <table id="moves-table">
+          <thead>
+            <tr>
+              <th>Jogador</th>
+              <th>Jogada</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="panel-box">
+        <h2>Eventos do jogo</h2>
+        <ul id="event-list"></ul>
+      </section>
+    </aside>
+  </main>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="winner-box">
+      <h2 id="winner-title">Fim de jogo!</h2>
+      <p id="winner-message"></p>
+      <button id="play-again-button">Jogar novamente</button>
+    </div>
+  </div>
+
+  <script src="jogo.js"></script>
+</body>
+</html>
