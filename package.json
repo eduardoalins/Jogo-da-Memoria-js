@@ -1,0 +1,13 @@
+{
+  "name": "memory-game-multiplayer",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev:client": "npm -w client run dev",
+    "dev:server": "npm -w server run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
